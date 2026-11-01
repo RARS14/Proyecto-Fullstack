@@ -1,5 +1,0 @@
-
-   PORT=3000
-   MONGO_URI=mongodb://127.0.0.1:27017/proyecto-fullstack
-   JWT_SECRET=208aaefe49f1305c5a66ce953587add108ae20147fabb97916dab79aeeade77e
-   
