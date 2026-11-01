@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f2f5;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 360px;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin: 0 0 4px;
+  text-align: center;
+  color: #1f2937;
+}
+
+.subtitle {
+  margin: 0 0 24px;
+  text-align: center;
+  color: #6b7280;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #374151;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+button {
+  width: 100%;
+  padding: 11px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.btn-secondary:hover {
+  background: #d1d5db;
+}
+
+.message {
+  min-height: 20px;
+  margin: 8px 0 0;
+  text-align: center;
+  font-size: 14px;
+  color: #dc2626;
+}
+
+.message.ok {
+  color: #16a34a;
+}
+
+
+.tasks-page {
+  align-items: flex-start;
+  padding: 40px 16px;
+}
+
+.card.wide {
+  max-width: 520px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.btn-small {
+  width: auto;
+  margin: 0;
+  padding: 8px 14px;
+}
+
+.task-form {
+  display: flex;
+  gap: 8px;
+}
+
+.task-form input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 4px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+li input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+li span {
+  flex: 1;
+  color: #1f2937;
+}
+
+li.done span {
+  color: #9ca3af;
+  text-decoration: line-through;
+}
+
+.btn-delete {
+  width: auto;
+  margin: 0;
+  padding: 6px 10px;
+  font-size: 13px;
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.btn-delete:hover {
+  background: #fecaca;
+}
+
+.empty {
+  text-align: center;
+  color: #6b7280;
+}

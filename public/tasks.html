@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis tareas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="tasks-page">
+  <div class="card wide">
+    <div class="header">
+      <h1>Mis tareas</h1>
+      <button id="logout-btn" class="btn-secondary btn-small">Cerrar sesión</button>
+    </div>
+
+    <form id="task-form" class="task-form">
+      <input type="text" id="task-input" placeholder="Nueva tarea" required>
+      <button type="submit" class="btn-primary btn-small">Agregar</button>
+    </form>
+
+    <p id="message" class="message"></p>
+
+    <ul id="task-list"></ul>
+    <p id="empty" class="empty"></p>
+  </div>
+
+  <script src="tasks.js"></script>
+</body>
+</html>
