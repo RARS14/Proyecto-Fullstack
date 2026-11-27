@@ -10,7 +10,7 @@ const validateTask = (req, res, next) => {
 
 const validateLogin = (req, res, next) => {
   const { username, password } = req.body;
-  if (!username || !password) {
+  if (typeof username !== 'string' || typeof password !== 'string' || !username || !password) {
     return res.status(400).json({ message: 'Usuario y contraseña son obligatorios' });
   }
   next();
@@ -18,7 +18,7 @@ const validateLogin = (req, res, next) => {
 
 const validateRegister = (req, res, next) => {
   const { username, password } = req.body;
-  if (!username || !password) {
+  if (typeof username !== 'string' || typeof password !== 'string' || !username || !password) {
     return res.status(400).json({ message: 'Usuario y contraseña son obligatorios' });
   }
   if (password.length < 6) {
