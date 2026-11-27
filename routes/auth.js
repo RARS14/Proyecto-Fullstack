@@ -25,8 +25,15 @@ router.post('/login', validateLogin, async (req, res) => {
   if (!passwordOk) {
     return res.status(401).json({ message: 'Usuario o contraseña incorrectos' });
   }
-  const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '2h' });
+  const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '2h' });
   res.json({ token });
 });
+const authMiddleware = require('../middleware/authmiddleware');
+const adminOnly = require('../middleware/adminOnly');
 
+// Lista de usuarios: solo admin
+router.get('/users', authMiddleware, adminOnly, async (req, res) => {
+  const users = await User.find().select('-password');
+  res.json(users);
+});
 module.exports = router;

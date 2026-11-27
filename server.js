@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/tasks', require('./routes/tasks'));
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/rates', require('./routes/rates'));
 
 app.use(notFound);
 app.use(errorHandler);
